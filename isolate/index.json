@@ -1,0 +1,82 @@
+{
+  "path": "/",
+  "dirs": [
+    {
+      "path": "/00-copying-arrays-and-objects",
+      "files": [
+        {
+          "path": "/0-comparing-reference-types.js"
+        },
+        {
+          "path": "/1-logging-side-effects.js"
+        },
+        {
+          "path": "/2-shallow-clone.js"
+        },
+        {
+          "path": "/3-logging-shallow-clones.js"
+        },
+        {
+          "path": "/4-deep-clone.js"
+        },
+        {
+          "path": "/5-logging-deep-clones.js"
+        }
+      ]
+    },
+    {
+      "path": "/01-application-state",
+      "dirs": [
+        {
+          "path": "/examples",
+          "files": [
+            {
+              "path": "/0-program-vs-application-state.js"
+            },
+            {
+              "path": "/1-logging-state.js"
+            },
+            {
+              "path": "/2-logging-user-interactions.js"
+            }
+          ],
+          "isExample": true
+        },
+        {
+          "path": "/exercises",
+          "files": [
+            {
+              "path": "/1-provide-correct-input.js"
+            },
+            {
+              "path": "/2-provide-correct-input.js"
+            },
+            {
+              "path": "/3-the-average-demo.js",
+              "isExample": true
+            },
+            {
+              "path": "/3-the-average.js"
+            },
+            {
+              "path": "/4-guess-the-word-demo.js",
+              "isExample": true
+            },
+            {
+              "path": "/4-guess-the-word.js"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "config": {
+    "title": "s-o-c/isolate",
+    "path": "/",
+    "loopGuard": {
+      "active": false,
+      "max": 20
+    },
+    "buttons": []
+  }
+}

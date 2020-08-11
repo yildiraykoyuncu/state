@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset='utf-8'>
+  <title>favorite phrase (DOM)</title>
+
+  <style>
+    .discrete {
+      color: gray;
+    }
+  </style>
+
+  <script src='../../../lib/deep-clone.js'></script>
+
+  <script id='data'>
+    'use strict';
+
+    const state = {
+      favorite: -1,
+      phrases: []
+    };
+
+    // log this variable in the console for a history of:
+    //  all user ineractions
+    //  all state changes
+    const appLog = [{
+      state: deepClone(state)
+    }];
+  </script>
+
+  <script id='views'>
+    'use strict';
+
+    const renderWordsLis = (arrOfStrings) => {
+      const addListEntry = (list, next, index) => {
+        return `${list}\n<li index="${index}">${next}</li>`;
+      };
+      return arrOfStrings
+        .reduce(addListEntry, '');
+    };
+
+    console.log('--- testing: renderWordsLis');
+    console.assert(renderWordsLis(['a', 'b']) === '\n<li index="0">a</li>\n<li index="1">b</li>',
+      'Test 1');
+    console.assert(renderWordsLis(['a', 'b', 'c']) === '\n<li index="0">a</li>\n<li index="1">b</li>\n<li index="2">c</li>',
+      'Test 2');
+    console.assert(renderWordsLis(['potato', 'tomato']) === '\n<li index="0">potato</li>\n<li index="1">tomato</li>',
+      'Test 3');
+
+    const renderFavorite = (index, phrase) => {
+      return `<p>favorite:</p> <code>${index}. ${phrase}</code>`;
+    };
+  </script>
+
+  <script id='handlers'>
+    'use strict';
+
+    const addWordHandler = () => {
+      const logEntry = {
+        action: 'add phrase',
+        event
+      };
+      appLog.push(logEntry);
+
+      const inputEl = document.getElementById('phrase-input');
+      const userInput = inputEl.value;
+      // log user input
+      logEntry.input = userInput;
+
+      if (userInput === '') {
+        // log early exit
+        logEntry.exit = 'empty user input';
+        return;
+      }
+
+      state.phrases.push(userInput);
+      // log new state
+      logEntry.state = deepClone(state);
+
+      const renderedLis = renderWordsLis(state.phrases);
+      const listEl = document.getElementById('phrases-list');
+      listEl.innerHTML = renderedLis;
+      // log new view
+      logEntry.view = renderedLis;
+    };
+
+    const setFavoriteHandler = (event) => {
+      const logEntry = {
+        action: 'set favorite',
+        event
+      };
+      appLog.push(logEntry);
+
+      if (event.target === event.currentTarget) {
+        // log early exit
+        logEntry.exit = 'did not click a list item';
+        return;
+      }
+
+      const favoriteLi = event.target;
+      const favoriteIndexStr = favoriteLi.getAttribute('index');
+      const favoriteIndex = Number(favoriteIndexStr);
+      state.favorite = favoriteIndex;
+      // log new state
+      logEntry.state = deepClone(state);
+
+      const favoritePhrase = state.phrases[state.favorite];
+      const favoriteView = renderFavorite(favoriteIndex, favoritePhrase);
+      document.getElementById('favorite').innerHTML = favoriteView;
+      // log new view
+      logEntry.view = favoriteView;
+    };
+  </script>
+</head>
+
+<body>
+
+  <main id='user interface'>
+    <button onclick='console.log(appLog)'>appLog</button>
+    <hr>
+    <input id='phrase-input' placeholder='new phrase'>
+    <button id='add-button'>add phrase</button>
+    <br>
+    <br>
+    <div id='favorite'></div>
+    <hr>
+    <text class='discrete'>click an item to set favorite</text>
+    <br>
+    <ol id='phrases-list' start='0'></ol>
+  </main>
+
+  <script id='listeners'>
+    document.getElementById('add-button')
+      .addEventListener('click', addWordHandler);
+
+    document.getElementById('phrases-list')
+      .addEventListener('click', setFavoriteHandler);
+  </script>
+
+</body>
+
+</html>

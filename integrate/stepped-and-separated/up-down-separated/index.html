@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <title>Up, Down</title>
+  <script src='../../../lib/deep-clone.js'></script>
+  <link rel="stylesheet" href="./style.css">
+  <script src='./data/numbers.js'></script>
+  <script src='./log.js'></script>
+  <script src='./init.js'></script>
+
+  <script src='./handlers/up.js'></script>
+  <script src='./handlers/down.js'></script>
+  <script src='./handlers/reset.js'></script>
+</head>
+
+<body>
+  <section id='user-interface' class='centered'>
+    <code id='current-number'></code> <br>
+    <button id='plus-one'>+</button>
+    <button id='minus-one'>-</button> <br>
+    <button id='reset'>reset</button>
+  </section>
+
+  <script src='./listeners/up.js'></script>
+  <script src='./listeners/down.js'></script>
+  <script src='./listeners/reset.js'></script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <title>Up, Down</title>
+  <script src='../../../lib/deep-clone.js'></script>
+  <style>
+    .centered {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+  </style>
+  <script id='data'>
+    const numbers = {
+      current: 0,
+      past: []
+    }
+  </script>
+  <script id='log'>
+    const log = [];
+  </script>
+  <script id='init'>
+    window.onload = function () {
+      // log initial state
+      // creating a copy so the log entry does not change later with side-effects
+      const copiedState = deepClone(numbers);
+      log.push({ initialNumbers: copiedState });
+      document.getElementById('current-number').innerHTML = numbers.current;
+    }
+  </script>
+  <script id="handlers">
+    function up() {
+      debugger;
+      numbers.past.push(numbers.current);
+      numbers.current += 1;
+      document.getElementById('current-number').innerHTML = numbers.current;
+      const copiedState = deepClone(numbers);
+      log.push({
+        handler: 'up',
+        numbers: copiedState
+      });
+    }
+  </script>
+</head>
+
+<body>
+  <section id='user-interface' class='centered'>
+    <code id='current-number'></code> <br>
+    <button id='plus-one'>+</button>
+  </section>
+
+  <script id='listeners'>
+    document.getElementById('plus-one').addEventListener('click', up);
+  </script>
+</body>
+
+</html>

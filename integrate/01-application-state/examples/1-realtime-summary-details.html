@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <title>Summary & Details</title>
+
+  <script src='../../../lib/deep-clone.js'></script>
+
+  <script id='data'>
+    const state = {
+      isOpen: false,
+      summaryText: '',
+      mainText: '',
+    }
+    const appLog = [];
+  </script>
+
+  <script id='views'>
+    // https://dev.to/samanthaming/extract-functions-arguments-using-destructure-in-javascript-169k
+    // https://thewebdev.info/2020/07/25/best-of-modern-javascript%E2%80%8A-%E2%80%8Aobject-and-array-parameter-destructuring/
+    // http://www.pythontutor.com/live.html#code=const%20destructuredParameters%20%3D%20%28%7Ba,%20b%7D%29%3D%3E%7B%0A%20%20const%20paramsAre%20%3D%20%60a%3A%20%24%7Ba%7D,%20b%3A%20%24%7Bb%7D%60%3B%0A%20%20return%20paramsAre%3B%0A%7D%3B%0A%0Aconst%20arg%20%3D%20%7B%0A%20%20a%3A1,%0A%20%20b%3A2%0A%7D%3B%0A%0Aconst%20returned%20%3D%20destructuredParameters%28arg%29%3B&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false
+    const renderDetails = ({ isOpen, summaryText, mainText }) => {
+      return (
+        `<details ${isOpen ? 'open' : ''}>` +
+        `  <summary>${summaryText}</summary>` +
+        `  <p>${mainText}</p>` +
+        `</details>`
+      );
+    };
+  </script>
+
+  <script id='handlers'>
+    const updateComponentHandler = (event) => {
+      const logEntry = {
+        action: 'update component',
+        event
+      };
+      appLog.push(logEntry);
+
+      const form = event.target.form;
+
+      // update state with user input
+      state.mainText = form.mainText.value;
+      state.summaryText = form.summaryText.value;
+      state.isOpen = form.isOpen.checked;
+      // log new state
+      logEntry.state = deepClone(state);
+
+      // update UI from state
+      const detailsHtml = renderDetails(state);
+      const root = document.getElementById('root');
+      root.innerHTML = detailsHtml;
+      // log new view rendered from state
+      logEntry.view = detailsHtml;
+    };
+  </script>
+
+  <script id='init'>
+    window.onload = () => {
+      // render the initial state
+      const detailsHtml = renderDetails(state);
+      const root = document.getElementById('root');
+      root.innerHTML = detailsHtml;
+
+      appLog.push({
+        state: deepClone(state),
+        view: detailsHtml
+      });
+    }
+  </script>
+</head>
+
+<body>
+  <section id='user-interface'>
+    <button onclick='console.log(appLog)'>appLog</button>
+    <hr>
+    <form id='update-component-form'>
+      is open: <input type='checkbox' name='isOpen' /> <br>
+      summary text: <input type='text' name='summaryText' /> <br>
+      main text: <input type='text' name='mainText' />
+    </form>
+    <hr>
+    <div id='root'></div>
+  </section>
+
+  <script id='listeners'>
+    document.getElementById('update-component-form')
+      .addEventListener('change', updateComponentHandler);
+
+    document.getElementById('root')
+      .addEventListener('click', (e) => e.preventDefault());
+  </script>
+</body>
+
+</html>
