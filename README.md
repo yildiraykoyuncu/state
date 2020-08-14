@@ -108,21 +108,29 @@ The focus of week 1 is storing important data in an object called _state_, and l
 
 ### Prep Work
 
+> before class
+
 - [Isolate](./isolate/index.html)
   - Copying Arrays and Objects
   - Application State (examples)
 - [Integrate](./integrate/README.md)
   - Application State (examples)
 
-### Isolate
+### Lesson Plan
+
+> during class
+
+#### Isolate
 
 - [Application State](./isolate/index.html) (examples & exercises)
 
-### Integrate
+#### Integrate
 
 - [Application State](./integrate/README.md) (examples & exercises)
 
 ### Project
+
+> after class
 
 > To be announced Monday after class
 
@@ -136,16 +144,23 @@ The focus of week 2 is learning how to render data into DOM elements to create i
 
 ### Prep Work
 
+> before class
 
-### [Isolate](../isolate/index.html)
+### Lesson Plan
+
+> during class
+
+#### [Isolate](../isolate/index.html)
 
 
 
-### [Integrate](../integrate/README.md)
+#### [Integrate](../integrate/README.md)
 
 
 
 ### Project
+
+> after class
 
 
 [TOP](#state)
