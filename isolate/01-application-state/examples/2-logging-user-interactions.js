@@ -13,9 +13,11 @@
 
   Clear logs are like a debugger for the big-picture of your project
   the debugger lets you step through each individual step of your application
+    - Implementation
     this very specific view helps to fix specific bugs
     but can make it hard to understand the big picture of your application
   logging changes to important data in your will help you to see the big picture
+    - Behavior
     seeing how the application progresses over longer period of times
     with the clutter of extra variables removed for clarity
 
