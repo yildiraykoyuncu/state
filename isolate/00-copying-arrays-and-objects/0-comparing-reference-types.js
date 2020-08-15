@@ -21,6 +21,11 @@ array1.push('chair');
 alsoArray1.push('table');
 
 
+// (clearing extra values from array1 for the next example)
+array1.pop();
+array1.pop();
+
+// the next example
 console.log('different arrays in memory');
 const array2 = ['hi', 'bye'];
 
