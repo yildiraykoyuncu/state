@@ -43,10 +43,10 @@ while (acceptingInput) {
 
 
 // --- provide the correct input to pass this test ---
-it('the user entered "a", "b", "c"', () => {
+it('the user entered "toad", "bear", "koala"', () => {
   const expected = {
     favorite: -1,
-    words: ['a', 'b', 'c']
+    words: ['toad', 'bear', 'koala']
   };
   expect(state).to.deep.equal(expected);
 });
@@ -87,10 +87,10 @@ else {
 }
 
 // --- provide the correct user input to pass this test ---
-it('the user prefers "b"', () => {
+it('the user prefers "bear"', () => {
   const expected = {
     favorite: 1,
-    words: ['a', 'b', 'c']
+    words: ['toad', 'bear', 'koala']
   };
   expect(state).to.deep.equal(expected);
 });
