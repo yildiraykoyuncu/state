@@ -71,7 +71,7 @@
     }
   ],
   "config": {
-    "title": "s-o-c/isolate",
+    "title": "state/isolate",
     "path": "/",
     "loopGuard": {
       "active": false,
