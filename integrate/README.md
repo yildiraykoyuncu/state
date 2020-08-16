@@ -6,7 +6,7 @@ Examples and exercises to study
 - /01-application-state
   - /examples
     - <a href="./01-application-state/examples/1-realtime-summary-details.html" target="_blank">/1-realtime-summary-details.html</a>
-    - <a href="./01-application-state/examples/2-favorite-word-dom.html" target="_blank">/2-favorite-word-dom.html</a>
+    - <a href="./01-application-state/examples/2-favorite-phrase-dom.html" target="_blank">/2-favorite-phrase-dom.html</a>
 
   - /exercises
     - <a href="./01-application-state/exercises/the-average-demo.html" target="_blank">/the-average-demo.html</a>
