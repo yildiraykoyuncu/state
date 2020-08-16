@@ -4,7 +4,7 @@ const expect = chai.expect;
 
 /* Provide correct input
 
-  this exercises doesn't have any code to write, fix, or complete!
+  you do not need to write any code, fix any bugs or fill any blanks!
 
   throughout the script there are two tests
     the tests assert what state should be at that step of the program
