@@ -1,4 +1,4 @@
-# Integrate: Separation of Concerns
+# Integrate: State
 
 Examples and exercises to study
 
