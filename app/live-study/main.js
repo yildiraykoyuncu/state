@@ -137,6 +137,11 @@ export default class LiveStudy {
   renderStudyButtons(exercise) {
     const container = document.createElement('div');
 
+    // const clearConsoleButton = document.createElement('button');
+    // clearConsoleButton.innerHTML = 'clear console';
+    // clearConsoleButton.onclick = () => console.clear();
+    // container.appendChild(clearConsoleButton);
+
     const formatButton = document.createElement('button');
     formatButton.innerHTML = 'format code';
     formatButton.onclick = () => editor.trigger('anyString', 'editor.action.formatDocument');
@@ -189,6 +194,8 @@ export default class LiveStudy {
 
 
     container.appendChild(document.createElement('br'));
+
+    // container.appendChild(document.createTextNode('run code: '));
 
     for (let vizTool of exercise.config.buttons) {
       const name = Object.keys(vizTool)[0];
