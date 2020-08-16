@@ -26,6 +26,7 @@
 
 // this variable stores useful data for the user
 //  it is the state
+//  this is for the user
 const state = {
   favorite: -1,
   words: []
@@ -33,6 +34,7 @@ const state = {
 // this variable stores useful data for developers
 //  it is a log of all user interactions and state changes
 //  logs like this one are incredibly helpful for debugging
+// this is for the developer
 const stateLog = [
   deepClone(state)
 ];
@@ -71,7 +73,8 @@ const renderedWords = state.words.reduce((msg, next, index) => {
 const message = `these are the random strings: ${renderedWords}`;
 alert(message);
 // stores the random array index
-const favoriteIndex = Math.ceil(Math.random() * (range - 1));
+
+const favoriteIndex = Math.floor(Math.random() * range);
 alert(`favorite index: ${favoriteIndex}`);
 
 // use that word to update state.favorite
