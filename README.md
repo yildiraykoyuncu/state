@@ -56,7 +56,7 @@ To help you understand and debug your projects you will learn about __logging__ 
 
 In this module you'll be flipping everything upside down! In previous modules you learned to develop your projects from the user interface backwards, beginning by planning what a user will see on the screen and how they will in interact with this.  Starting now you will learn to do things from the inside out:
 
-1. __What can a user do on your web site?__ Write user stories to describe the user's possible interactions with your site
+1. __What can a user do on your website?__ Write user stories to describe the user's possible interactions with your site
 2. __What data is necessary for these user stories?__  Write a schema to describe & validate your project's data. Try determining what will be the best order to develope these stories.
 3. __How does the UI represent *state* and *user interactions*?__ Write a wireframe to describe how the UI will represent the program state for users, and how users can interact with the state.
 4. __What code do you need to write?__ Fill out your development strategy with the code you will need to write, and who is responsible for what.
