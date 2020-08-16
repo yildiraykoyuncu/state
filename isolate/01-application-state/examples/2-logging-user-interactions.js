@@ -14,7 +14,6 @@
     things like: local variables, which handler was called, ...
 
 
-
   This is called "logging"
 
   Clear logs are like a debugger for the big-picture of your project
