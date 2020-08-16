@@ -63,7 +63,7 @@ const renderedWords = state.words.reduce((msg, next, index) => {
 const message = `these are the random words: ${renderedWords}`;
 alert(message);
 // stores the random array index
-const favoriteIndex = Math.ceil(Math.random() * (range - 1));
+const favoriteIndex = Math.floor(Math.random() * range);
 alert(`favorite index: ${favoriteIndex}`);
 
 // use the random index to update state.favorite
