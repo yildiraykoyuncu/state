@@ -25,6 +25,9 @@
 
 ### Isolating JavaScript
 
+* Defining _State_
+  * Determining what data is important for a user
+  * Separating important data from local variables
 * Logging
   * Capture and store a log of all user interactions & state changes
   * Use this log to reconstruct user actions and debug your projects
