@@ -1,7 +1,7 @@
 # State
 
 > "In information technology and computer science, a system is described as stateful if it is designed to remember preceding events or user interactions; the remembered information is called the state of the system."
-> * [Wikipedia](https://en.wikipedia.org/wiki/State_(computer_science))
+> - [Wikipedia](https://en.wikipedia.org/wiki/State_(computer_science))
 
 ## Contents
 
@@ -25,21 +25,21 @@
 
 ### Isolating JavaScript
 
-* Defining _State_
-  * Determining what data is important for a user
-  * Separating important data from local variables
-* Logging
-  * Capture and store a log of all user interactions & state changes
-  * Use this log to reconstruct user actions and debug your projects
+- Defining _State_
+  - Determining what data is important for a user
+  - Separating important data from local variables
+- Logging
+  - Capture and store a log of all user interactions & state changes
+  - Use this log to reconstruct user actions and debug your projects
 
 ### Integrating JavaScript
 
-* Data-first development
-  * Understanding applications as Data + User Interactions
-  * Developing from the "inside" out: planning the data & logic of your app without a user interface
-* Rendering DOM Components
-  * Render data into DOM elements
-  * Dynamically update the DOM to represent the current state
+- Data-first development
+  - Understanding applications as Data + User Interactions
+  - Developing from the "inside" out: planning the data & logic of your app without a user interface
+- Rendering DOM Components
+  - Render data into DOM elements
+  - Dynamically update the DOM to represent the current state
 
 [TOP](#state)
 
@@ -68,18 +68,20 @@ In this module you'll be flipping everything upside down! In previous modules yo
 
 A working project is not enough! For projects in this module we will expect you to turn in code that is well organized & documented according to it's role.  Your projects should have these directories:
 
-* `/data`: contains your schema, initial state, and a helpful README (including a description of your data)
-* `/logic`: contains any functions and tests, and a README describing what is in each file
-* `/handlers`: contains the handlers for your app, one per user story.  and a helpful README
-* `/listeners`: contains the listeners for your app, generally one per user story, and a helpful README
-* `style.css`: contains the CSS for your web page and any helpful comments
-* `index.html`: contains the initial DOM for your user interface & requires all scripts
-* `init.js`: contains the code to render your initial UI and log the initial state (_optional_)
-* `log.js`: contains the initial empty log for your project.  For now, just an empty array
-* `README.md`: describes what your project does & how to use it.
-* `development-strategy.md`: a file containing a table of your user stories in order, with one column for each folder.
+- `/src/logic`: contains any functions and tests, and a README describing what is in each file
+- `/src/handlers`: contains the handlers for your app, one per user story.  and a helpful README
+- `/src/listeners`: contains the listeners for your app, generally one per user story, and a helpful README
+- `src/views`: contains the functions your app uses to render data for the UI
+- `src/init.js`: contains the code to render your initial UI and log the initial state (_optional_)
+- `src/data.js`: contains your initial state
+- `src/log.js`: contains the initial empty log for your project.  For now, just an empty array
+- `style.css`: contains the CSS for your web page and any helpful comments
+- `index.html`: contains the initial DOM for your user interface & requires all scripts
+- `README.md`: describes what your project does & how to use it.
+- `development-strategy.md`: a file containing your team's development strategy.
+- `user-stories.md`: a file containing suggested user stories
 
-Your project may contain one more directory called `/lib` if you are beginning from a fork, but there is nothing for you to write in here. This folder will contain testing and validation scripts provided by us.
+Your project will contain one more directory called `/lib`, but there is nothing for you to write in here. This folder will contain dependencies for your project. Feeling motivated? take a look through these files to try and understand them!
 
 
 [TOP](#state)
@@ -88,6 +90,7 @@ Your project may contain one more directory called `/lib` if you are beginning f
 
 ## Suggested Study
 
+- [What is state and why should we care about it?](https://dev.to/codeartistryio/what-is-state-and-why-should-we-care-about-it-4o95)
 - [/integrate/stepped-and-separated](./integrate/stepped-and-separated) (code to study)
 - > more links coming soon
 
@@ -135,7 +138,26 @@ The focus of week 1 is storing important data in an object called _state_, and l
 
 > after class
 
-> To be announced Monday after class
+This week's project is to write a JS Quiz.  You'll be given:
+
+- [Starter code](https://github.com/HackYourFutureBelgium/state-project-js-quiz)
+- [An initial state](https://github.com/HackYourFutureBelgium/state-project-js-quiz/tree/master/src/data.js)
+- [A list of possible user stories](https://github.com/HackYourFutureBelgium/state-project-js-quiz/tree/master/user-stories.md)
+
+The rest is up to you!
+
+#### Checklist
+
+```md
+- [ ] [repo](https://github.com/_/_) with a complete README
+- [ ] [live demo](https://_.github.io/_)
+- [ ] [development-strategy](https://github.com/_/_/tree/master/development-strategy.md)
+- [ ] [At least 6 initial quiz questions](https://github.com/_/_/tree/master/src/data.js)
+- [ ] [A project board](https://github.com/_/_/projects/X)
+- [ ] [One branch per step in `development-strategy.md`](https://github.com/_/_/network)
+- [ ] [One closed issue per task](https://github.com/_/_/issues?q=is%3Aissue+is%3Aclosed) (you can have more than task per development step!)
+- [ ] [One closed PR per task issue](https://github.com/_/__/pulls?q=is%3Apr+is%3Aclosed)
+```
 
 [TOP](#state)
 

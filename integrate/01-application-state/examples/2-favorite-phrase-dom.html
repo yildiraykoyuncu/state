@@ -32,7 +32,7 @@
   <script id='views'>
     'use strict';
 
-    const renderPhrasesLis = (arrOfStrings) => {
+    const renderPhrasesList = (arrOfStrings) => {
       const addListEntry = (list, next, index) => {
         return `${list}\n<li id="${index}">${next}</li>`;
       };
@@ -43,12 +43,12 @@
       return `<ol start="0">${listItems}\n</ol>`
     };
 
-    console.log('--- testing: renderPhrasesLis');
-    console.assert(renderPhrasesLis(['a', 'b']) === '<ol start="0">\n<li id="0">a</li>\n<li id="1">b</li>\n</ol>',
+    console.log('--- testing: renderPhrasesList');
+    console.assert(renderPhrasesList(['a', 'b']) === '<ol start="0">\n<li id="0">a</li>\n<li id="1">b</li>\n</ol>',
       'Test 1');
-    console.assert(renderPhrasesLis(['a', 'b', 'c']) === '<ol start="0">\n<li id="0">a</li>\n<li id="1">b</li>\n<li id="2">c</li>\n</ol>',
+    console.assert(renderPhrasesList(['a', 'b', 'c']) === '<ol start="0">\n<li id="0">a</li>\n<li id="1">b</li>\n<li id="2">c</li>\n</ol>',
       'Test 2');
-    console.assert(renderPhrasesLis(['potato', 'tomato']) === '<ol start="0">\n<li id="0">potato</li>\n<li id="1">tomato</li>\n</ol>',
+    console.assert(renderPhrasesList(['potato', 'tomato']) === '<ol start="0">\n<li id="0">potato</li>\n<li id="1">tomato</li>\n</ol>',
       'Test 3');
 
     const renderFavorite = (id, phrase) => {
@@ -81,7 +81,7 @@
       // log new state
       logEntry.state = deepClone(state);
 
-      const renderedLis = renderPhrasesLis(state.phrases);
+      const renderedLis = renderPhrasesList(state.phrases);
       const phrasesEl = document.getElementById('phrases');
       phrasesEl.innerHTML = renderedLis;
       // log new view
