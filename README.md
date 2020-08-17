@@ -148,7 +148,7 @@ The rest is up to you!
 
 #### Checklist
 
-```md
+```markdown
 - [ ] [repo](https://github.com/_/_) with a complete README
 - [ ] [live demo](https://_.github.io/_)
 - [ ] [development-strategy](https://github.com/_/_/tree/master/development-strategy.md)
