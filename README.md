@@ -23,28 +23,43 @@
 
 ## Learning Objectives
 
-### Isolating JavaScript
+### Vocabulary
 
-- Defining _State_
-  - Determining what data is important for a user
-  - Separating important data from local variables
-- Logging
-  - Capture and store a log of all user interactions & state changes
-  - Use this log to reconstruct user actions and debug your projects
-- Looking for a real-world example of logging?
-  1. open this repo in your terminal
-  2. enter `npm run start`
-  3. open `localhost:3000` in your browser
-  4. open the generated `/server-logs` to see a log of all server requests and responses!
+State/Log/Render are not bound to JavaScript. They are more general concepts. Any programming language can use state to store information, use built-in functions to log and use library functions to render.
 
-### Integrating JavaScript
+- __State__
+  - Information that is useful for the User of the program
+  - One can use any data structure or data type to store this information (objects/arrays/numbers/...)
+- __Log__
+  - It is like a diary/journal. A person logs an activity, a program logs an action/location/variables etc.
+  - Note that developers can also decide to log the _state_ of the program.
+  - Also note the name of console.log() function is purposeful! It prints(logs) on the console.
+  - It is also possible to print(log) to a file instead of console, which is a more common practice.
+  - Want to see file logging in real life?
+    1. open this repo in your terminal
+    2. enter `npm run start`
+    3. open `localhost:3000` in your browser
+    4. open the generated `/server-logs` folder in VSC to see a log of all server [requests and responses](https://www.youtube.com/watch?v=DrI2lUXL1no)!
+- __Render__
+  - The term comes from the Computer Graphics.
+  - Rendering simply means drawing something on the computer screen.
+  - Rendering can also mean making something visual or preparing a view for your data.
+
+### Programming Skills
 
 - Data-first development
   - Understanding applications as Data + User Interactions
   - Developing from the "inside" out: planning the data & logic of your app without a user interface
-- Rendering DOM Components
+- Defining _State_
+  - Determining what data is important for a user
+  - Choosing the correct JS data structure for you state
+  - Separating important data from local variables
+- Logging
+  - Capture and store a log of all user interactions & state changes
+  - Use this log to reconstruct user actions and debug your projects
+- Dynamically update the DOM to represent the current state
   - Render data into DOM elements
-  - Dynamically update the DOM to represent the current state
+  - Re-render portions of the DOM for a reactive experience
 
 [TOP](#state)
 

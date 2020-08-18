@@ -71,7 +71,7 @@ const handleRequest = (req, res) => {
         const html404 = `<!DOCTYPE html><html><head><title>404</title></head><body><h1>404: ${relPath}</h1></body></html>`;
         res.writeHead(404, { 'Content-Type': 'text/html' });
         res.end(html404, 'utf-8');
-        logMsg = 'res: 404 ' + relPath;
+        logMsg = 'response: 404 ' + relPath;
       } else {
         const errMsg = `Server error: ${error.code} ..`;
         res.writeHead(500);
@@ -82,7 +82,7 @@ const handleRequest = (req, res) => {
     } else {
       res.writeHead(200, { 'Content-Type': contentType });
       const finalContent = extension === '.md'
-        ? marked(content.toString())
+        ? `<!DOCTYPE html><html><head><title>${relPath}</title><link rel="icon" href="./app/favicon.ico"  type="image/icon type"></head><body>\n${marked(content.toString())}\n</body></html>`
         : content;
 
       res.end(finalContent, 'utf-8');
