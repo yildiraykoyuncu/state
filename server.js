@@ -71,7 +71,7 @@ const handleRequest = (req, res) => {
         const html404 = `<!DOCTYPE html><html><head><title>404</title></head><body><h1>404: ${relPath}</h1></body></html>`;
         res.writeHead(404, { 'Content-Type': 'text/html' });
         res.end(html404, 'utf-8');
-        logMsg = 'response: 404 ' + relPath;
+        logMsg = 'res: 404 ' + relPath;
       } else {
         const errMsg = `Server error: ${error.code} ..`;
         res.writeHead(500);

@@ -15,7 +15,7 @@
 - Sundays & Projects
   - [Week 1](#week-1)
   - [Week 2](#week-2)
-- [Class Recordings](./class-recordings.md)
+- [Class Recordings](#class-recordings)
 - [Curriculum](https://home.hackyourfuture.be/curriculum) (external)
 - [HYF Home](https://home.hackyourfuture.be/) (external)
 
@@ -31,6 +31,11 @@
 - Logging
   - Capture and store a log of all user interactions & state changes
   - Use this log to reconstruct user actions and debug your projects
+- Looking for a real-world example of logging?
+  1. open this repo in your terminal
+  2. enter `npm run start`
+  3. open `localhost:3000` in your browser
+  4. open the generated `/server-logs` to see a log of all server requests and responses!
 
 ### Integrating JavaScript
 
@@ -83,7 +88,6 @@ A working project is not enough! For projects in this module we will expect you 
 
 Your project will contain one more directory called `/lib`, but there is nothing for you to write in here. This folder will contain dependencies for your project. Feeling motivated? take a look through these files to try and understand them!
 
-
 [TOP](#state)
 
 ---
@@ -102,7 +106,15 @@ Your project will contain one more directory called `/lib`, but there is nothing
 
 Exercises for solo-study.  We won't be checking these exercises unless you ask us to look them over, your learning is in your hands.  Take a look through these and find the ones that help the most, the rest will be here for you later!
 
-> To be announced Monday after class
+- [rendering-data](https://github.com/hackyourfuturebelgium/rendering-data)
+  - practice rendering JS data to DOM Elements
+  - this will help you understand the `/views` folder of your projects
+
+### Side-Projects
+
+Study and reverse-engineer projects from [javascript-30](https://github.com/HackYourFutureBelgium/javascript-30) and [vanillawebprojects](https://github.com/bradtraversy/vanillawebprojects).
+
+You can use the [state-project-starter](https://github.com/HackYourFutureBelgium/state-project-starter) to organize your code.
 
 [TOP](#state)
 
@@ -149,7 +161,7 @@ The rest is up to you!
 #### Checklist
 
 ```md
-- [ ] [repo](https://github.com/_/_) with a complete README
+- [ ] [repo](https://github.com/_/_) (with a complete README)
 - [ ] [live demo](https://_.github.io/_)
 - [ ] [development-strategy](https://github.com/_/_/tree/master/development-strategy.md)
 - [ ] [At least 6 initial quiz questions](https://github.com/_/_/tree/master/src/data.js)
@@ -186,6 +198,50 @@ The focus of week 2 is learning how to render data into DOM elements to create i
 ### Project
 
 > after class
+
+You and your team are on your own this week.  Using [state-project-starter](https://github.com/HackYourFutureBelgium/state-project-starter) as a starting point, build something to impress yourselves!  Anything goes.
+
+The most difficult part of this week will be coming up with your _project requirements_ and _project scope_.  You and your team will be defining your own state and user stories this week which means it's up to you how large or small, complex or simple your project is.  It will be better practice to plan a simple project you can finish, than a mind-blowing project you can't.
+
+#### Checklist
+
+```md
+- [ ] [repo](https://github.com/_/_) (with a complete README)
+- [ ] [live demo](https://_.github.io/_)
+- [ ] [development-strategy](https://github.com/_/_/tree/master/development-strategy.md)
+- [ ] [Initial State](https://github.com/_/_/tree/master/src/data.js)
+- [ ] [A project board](https://github.com/_/_/projects/X)
+- [ ] [One branch per step in `development-strategy.md`](https://github.com/_/_/network)
+- [ ] [One closed issue per task](https://github.com/_/_/issues?q=is%3Aissue+is%3Aclosed) (you can have more than task per development step!)
+- [ ] [One closed PR per task issue](https://github.com/_/__/pulls?q=is%3Apr+is%3Aclosed)
+```
+
+[TOP](#state)
+
+---
+
+## Class Recordings
+
+Screen recordings of class.  Coaches, when sending your PR's with links please ...
+
+- Add a link to your video in the correct module's section
+- Indicate which class you were teaching
+- Which week it was
+- Give your name
+- and a helpful description
+
+---
+
+### Classes 9 & 10
+
+[Unmesh](https://github.com/unmeshvrije
+), [Sali](https://github.com/Sali-Almurshidi), [Ismaila](https://github.com/auloin), [Louis](https://github.com/Mamboleoo)
+
+#### Week 1
+
+1. [State & Logging](https://vimeo.com/448445380)
+1. [Object vs. State](https://vimeo.com/448849518)
+1. [Integrating State](https://vimeo.com/448849847)
 
 
 [TOP](#state)
