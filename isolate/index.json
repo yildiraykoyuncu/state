@@ -68,20 +68,6 @@
           ]
         }
       ]
-    },
-    {
-      "path": "/03-rendering-data",
-      "dirs": [
-        {
-          "path": "/examples",
-          "files": [
-            {
-              "path": "/spering.js"
-            }
-          ],
-          "isExample": true
-        }
-      ]
     }
   ],
   "config": {
