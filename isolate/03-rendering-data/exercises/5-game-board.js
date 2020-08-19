@@ -9,13 +9,13 @@ const expect = chai.expect;
  * @returns {HTMLTableElement} the rendered game board
  */
 const renderGameBoard = (arrOfArrs) => {
-  const tableEl = document.createElement('table');
+  _;
 
-  for (const row of arrOfArrs) {
-    const trEl = document.createElement('tr');
-    for (const filler of row) {
-      const tdEl = document.createElement('td');
-      tdEl.innerHTML = filler;
+  for (const _ of _) {
+    _;
+    for (const _ of _) {
+      _;
+      tdEl.innerHTML = _;
       trEl.appendChild(tdEl);
     }
     tableEl.appendChild(trEl);
