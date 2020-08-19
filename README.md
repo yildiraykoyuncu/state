@@ -111,7 +111,12 @@ Your project will contain one more directory called `/lib`, but there is nothing
 
 - [What is state and why should we care about it?](https://dev.to/codeartistryio/what-is-state-and-why-should-we-care-about-it-4o95)
 - [/integrate/stepped-and-separated](./integrate/stepped-and-separated) (code to study)
-- > more links coming soon
+- DOM Elements: Attributes vs. Properties
+  - [javascript.info](https://javascript.info/dom-attributes-and-properties)
+  - [FullstackTraning](https://blog.fullstacktraining.com/html-attributes-vs-dom-properties/) (article)
+  - [WebTunings](https://www.youtube.com/watch?v=9DWKjn969lM) (video)
+  - StackOverflow: [the difference](https://stackoverflow.com/questions/6003819/what-is-the-difference-between-properties-and-attributes-in-html), [when to use which](https://stackoverflow.com/questions/3919291/when-to-use-setattribute-vs-attribute-in-javascript)
+- [Learn DOM Rendering](https://github.com/oliverjam/learn-dom-rendering)
 
 [TOP](#state)
 
@@ -127,9 +132,12 @@ Exercises for solo-study.  We won't be checking these exercises unless you ask u
 
 ### Side-Projects
 
-Study and reverse-engineer projects from [javascript-30](https://github.com/HackYourFutureBelgium/javascript-30) and [vanillawebprojects](https://github.com/bradtraversy/vanillawebprojects).
+Using the [state-project-starter](https://github.com/HackYourFutureBelgium/state-project-starter), practice building projects! You can dream up your own ideas, or try reverse-engineering one of these projects:
 
-You can use the [state-project-starter](https://github.com/HackYourFutureBelgium/state-project-starter) to organize your code.
+- [Rock Paper Scissors (traversy)](https://www.youtube.com/watch?v=WR_pWXJZiRY)
+- [vanillawebprojects](https://github.com/bradtraversy/vanillawebprojects)
+- [javascript-30](https://github.com/HackYourFutureBelgium/javascript-30)
+
 
 [TOP](#state)
 
@@ -198,38 +206,25 @@ The focus of week 2 is learning how to render data into DOM elements to create i
 
 > before class
 
+Rendering Data Examples: Isolate & Integrate
+
 ### Lesson Plan
 
 > during class
 
 #### [Isolate](../isolate/index.html)
 
-
+[2. Rendering Data](./isolate/index.html)
 
 #### [Integrate](../integrate/README.md)
 
-
+[3. Rendering Data](./integrate/README.md)
 
 ### Project
 
 > after class
 
-You and your team are on your own this week.  Using [state-project-starter](https://github.com/HackYourFutureBelgium/state-project-starter) as a starting point, build something to impress yourselves!  Anything goes.
-
-The most difficult part of this week will be coming up with your _project requirements_ and _project scope_.  You and your team will be defining your own state and user stories this week which means it's up to you how large or small, complex or simple your project is.  It will be better practice to plan a simple project you can finish, than a mind-blowing project you can't.
-
-#### Checklist
-
-```md
-- [ ] [repo](https://github.com/_/_) (with a complete README)
-- [ ] [live demo](https://_.github.io/_)
-- [ ] [development-strategy](https://github.com/_/_/tree/master/development-strategy.md)
-- [ ] [Initial State](https://github.com/_/_/tree/master/src/data.js)
-- [ ] [A project board](https://github.com/_/_/projects/X)
-- [ ] [One branch per step in `development-strategy.md`](https://github.com/_/_/network)
-- [ ] [One closed issue per task](https://github.com/_/_/issues?q=is%3Aissue+is%3Aclosed) (you can have more than task per development step!)
-- [ ] [One closed PR per task issue](https://github.com/_/__/pulls?q=is%3Apr+is%3Aclosed)
-```
+Finish up the JS Quiz from last week.
 
 [TOP](#state)
 

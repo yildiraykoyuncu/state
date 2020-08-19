@@ -13,6 +13,16 @@ Examples and exercises to study
     - <a href="./01-application-state/exercises/the-average.html" target="_blank">/the-average.html</a>
 
 
+- /02-rendering-data
+  - /examples
+    - <a href="./02-rendering-data/examples/1-realtime-summary.html" target="_blank">/1-realtime-summary.html</a>
+    - <a href="./02-rendering-data/examples/2-favorite-phrase.html" target="_blank">/2-favorite-phrase.html</a>
+
+  - /exercises
+    - <a href="./02-rendering-data/exercises/the-average-demo.html" target="_blank">/the-average-demo.html</a>
+    - <a href="./02-rendering-data/exercises/the-average.html" target="_blank">/the-average.html</a>
+
+
 - /stepped-and-separated
   - /filter-words-separated
     - <a href="./stepped-and-separated/filter-words-separated/index.html" target="_blank">/index.html</a>

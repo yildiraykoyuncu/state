@@ -76,10 +76,45 @@
           "path": "/examples",
           "files": [
             {
-              "path": "/spering.js"
+              "path": "/1-anchor.js"
+            },
+            {
+              "path": "/2-header.js"
+            },
+            {
+              "path": "/3-linked-button.js"
+            },
+            {
+              "path": "/4-list-loop.js"
+            },
+            {
+              "path": "/5-list-reduce.js"
+            },
+            {
+              "path": "/6-class-name.js"
             }
           ],
           "isExample": true
+        },
+        {
+          "path": "/exercises",
+          "files": [
+            {
+              "path": "/1-paragraph.js"
+            },
+            {
+              "path": "/2-info.js"
+            },
+            {
+              "path": "/3-signup-form.js"
+            },
+            {
+              "path": "/4-all-users.js"
+            },
+            {
+              "path": "/5-game-board.js"
+            }
+          ]
         }
       ]
     }
