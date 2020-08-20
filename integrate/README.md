@@ -40,9 +40,6 @@ Examples and exercises to study
     - <a href="./stepped-and-separated/list-component-stepped/6-story-shift-word.html" target="_blank">/6-story-shift-word.html</a>
     - <a href="./stepped-and-separated/list-component-stepped/7-story-reset.html" target="_blank">/7-story-reset.html</a>
 
-  - /mystery-room-separated
-    - <a href="./stepped-and-separated/mystery-room-separated/index.html" target="_blank">/index.html</a>
-
   - /searchable-dictionary-separated
     - <a href="./stepped-and-separated/searchable-dictionary-separated/index.html" target="_blank">/index.html</a>
 
