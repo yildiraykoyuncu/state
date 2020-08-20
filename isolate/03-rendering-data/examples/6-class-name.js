@@ -15,7 +15,7 @@ const expect = chai.expect;
  * you can optionally assign multiple class names to your element
  * @param {number} level - what header level to render
  * @param {string} text - the text to render into the header
- * @param {string[]} classList - an array of class names
+ * @param {string[]} [classList=[]] - an array of class names
  * @returns {HTMLHeadingElement} a rendered header element
  */
 const renderHeader = (level, text, classList = []) => {

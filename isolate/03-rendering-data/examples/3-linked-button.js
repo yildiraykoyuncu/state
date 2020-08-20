@@ -7,7 +7,7 @@ const expect = chai.expect;
  *  you can optionally configure the target
  * @param {string} text - the button's text
  * @param {string} url - the link's URL
- * @param {string} target - where to open the link
+ * @param {string} [target='_blank'] - where to open the link
  *  defaults to '_blank'
  * @returns {HTMLAnchorElement} a linked button
  */

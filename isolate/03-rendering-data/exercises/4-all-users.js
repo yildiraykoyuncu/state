@@ -3,8 +3,8 @@
 const expect = chai.expect;
 
 /**
- *
- * @param {Object[]} arrOfUsers -
+ * renders user objects into a list of users
+ * @param {Object[]} arrOfUsers - array of user objects
  * @returns {HTMLUListElement}
  */
 const renderAllUsers = (arrOfUsers, id, classList = []) => {

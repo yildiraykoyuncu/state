@@ -5,7 +5,7 @@ const expect = chai.expect;
 /**
  * render a paragraph with optional styling
  * @param {string} text - the paragraph text
- * @param {string[]} classList - an array of classes to apply
+ * @param {string[]} [classList=[]] - an array of classes to apply
  * @returns {HTMLParagraphElement} a rendered paragraph element
  */
 const renderParagraph = (text, classList = []) => {

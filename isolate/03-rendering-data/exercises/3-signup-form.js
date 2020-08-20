@@ -6,10 +6,10 @@ const expect = chai.expect;
  * generate a sign-up form for your app
  * conditionally renders a greeting at the top of the form
  * @param {string} appName - used to customize the sign-up button
- * @param {string} greeting - (optional) a friendly greeting for users
+ * @param {string} [greeting=''] - a friendly greeting for users
  * @returns {HTMLFormElement} a customized sign-up form
  */
-const signupForm = (appName, greeting) => {
+const signupForm = (appName, greeting = '') => {
   const formEl = document.createElement('form');
 
   if (greeting) {

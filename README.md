@@ -117,6 +117,7 @@ Your project will contain one more directory called `/lib`, but there is nothing
   - [WebTunings](https://www.youtube.com/watch?v=9DWKjn969lM) (video)
   - StackOverflow: [the difference](https://stackoverflow.com/questions/6003819/what-is-the-difference-between-properties-and-attributes-in-html), [when to use which](https://stackoverflow.com/questions/3919291/when-to-use-setattribute-vs-attribute-in-javascript)
 - [Learn DOM Rendering](https://github.com/oliverjam/learn-dom-rendering)
+- [Learn Form Validation](https://github.com/oliverjam/learn-form-validation)
 
 [TOP](#state)
 
