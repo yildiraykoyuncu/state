@@ -4,7 +4,7 @@
 <head>
   <meta charset='utf-8'>
   <title>the average</title>
-
+  <script src='../../../app/lib/deep-clone.js'></script>
   <style>
     .discreet {
       color: darkgray;
@@ -19,22 +19,16 @@
       font-family: monospace;
     }
   </style>
-
-  <script src='../../../lib/deep-clone.js'></script>
-
   <script id='data'>
     'use strict';
-
     const state = {
       numbers: [],
       average: 0
     };
     const appLog = [];
   </script>
-
   <script id='logic'>
     'use strict';
-
     // this functions works
     /**
      * computes the average of all numbers in an array
@@ -52,43 +46,35 @@
       return average;
     };
   </script>
-
   <script id='views'>
     'use strict';
-
     /* write the view functions
-      inspect the demo and it's logs to figure out what to render
+      inspect the demo and it's logs to figure out what they should render
     */
-
     const renderNumberList = (arrOfNumbers) => {
 
     };
-
     const renderAverage = (average) => {
 
     };
   </script>
-
   <script id='handlers'>
     'use strict';
-
     const addNumberHandler = () => {
       const logEntry = {
         action: 'add number'
       };
       appLog.push(logEntry);
-
       const inputEl = document.getElementById('number-input');
       const userInput = Number(inputEl.value);
+
       // log user input
       logEntry.input = userInput;
-
       // update state
       state.numbers.push(userInput);
-      state.average = average(state.numbers);
+      state.average = average(_._);
       // log new state
       logEntry.state = deepClone(state);
-
 
       // update UI from state
 
@@ -97,8 +83,8 @@
       while (_._) {
         _.removeChild(_._);
       }
-      const renderedAverage = _(state._);
-      _.appendChild(renderedAverage);
+      const renderedAverage = renderAverage(_._);
+      _.appendChild(_);
       // log new view rendered from state
       logEntry.viewAverage = renderedAverage;
 
@@ -107,12 +93,11 @@
       while (_._) {
         _.removeChild(_._);
       }
-      const renderedList = _(state._);
-      _.appendChild(renderedList);
+      const renderedList = renderNumberList(_._);
+      _.appendChild(_);
       // log new view rendered from state
       logEntry.viewNumbers = renderedList;
     };
-
     const resetHandler = () => {
       const logEntry = {
         action: 'reset'
@@ -127,14 +112,13 @@
 
       // reset Ui
       document.getElementById('number-input').value = 0;
-
       // re-render the average
       const averageContainer = document.getElementById('average');
       while (_._) {
         _.removeChild(_._);
       }
-      const renderedAverage = renderAverage(state.average);
-      averageContainer.appendChild(renderedAverage);
+      const renderedAverage = renderAverage(_._);
+      _.appendChild(_);
       // log new view rendered from state
       logEntry.viewAverage = renderedAverage;
 
@@ -145,14 +129,12 @@
       }
     };
   </script>
-
   <script id='init'>
     window.onload = () => {
       const initLog = {
         state: deepClone(state)
       };
       appLog.push(initLog);
-
       const averageContainer = document.getElementById('average');
       const renderedAverage = renderAverage(state.average);
       averageContainer.appendChild(renderedAverage);
@@ -163,32 +145,30 @@
 </head>
 
 <body>
-
   <main id='user interface'>
     <button onclick='console.log(appLog)'>appLog</button>
     <br>
     what happens when you try clicking on a view in the log?
     <hr>
-    <input id='number-input' type='number' value='0'>
-    <button id='add-button'>add number to list</button>
-    <br>
-    <button id='reset-button'>reset</button>
+    <form id="add-number-form" action="#">
+      <input id='number-input' type='number' value='0'>
+      <button>add number to list</button>
+      <br>
+      <button type="button" id='reset-button'>reset</button>
+    </form>
     <br>
     <br>
     <div id='average'></div>
     <hr>
     <ul id='numbers-list'></ul>
   </main>
-
   <script id='listeners'>
     // the listeners are all correct
-    document.getElementById('add-button')
-      .addEventListener('click', addNumberHandler);
-
+    document.getElementById('add-number-form')
+      .addEventListener('submit', addNumberHandler);
     document.getElementById('reset-button')
       .addEventListener('click', resetHandler);
   </script>
-
 </body>
 
 </html>

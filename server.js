@@ -90,7 +90,9 @@ const handleRequest = (req, res) => {
         `    <link rel="icon" href="./app/favicon.ico"  type="image/icon type">\n` +
         `    <style>${ghStyles}</style>\n` +
         `  </head>\n` +
-        `  <body class='markdown-body'>\n${marked(content.toString())}\n</body>\n` +
+        `  <body class='markdown-body'>\n` +
+        `    ${marked(content.toString())}\n` +
+        `  </body>\n` +
         `</html>`
         : content;
 
