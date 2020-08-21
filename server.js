@@ -82,7 +82,15 @@ const handleRequest = (req, res) => {
     } else {
       res.writeHead(200, { 'Content-Type': contentType });
       const finalContent = extension === '.md'
-        ? `<!DOCTYPE html><html><head><title>${relPath}</title><link rel="icon" href="./app/favicon.ico"  type="image/icon type"></head><body>\n${marked(content.toString())}\n</body></html>`
+        ? `<!DOCTYPE html>\n` +
+        `<html>\n` +
+        `  <head>\n` +
+        `    <title>${relPath}</title>\n` +
+        `    <link rel="icon" href="./app/favicon.ico"  type="image/icon type">\n` +
+        `    <link rel="stylesheet" href="${relPath.split('/').slice(1, relPath.length - 1).map((_, index) => index === 0 ? '.' : '..').join('/') + '/public/style.css'}">\n` +
+        `  </head>\n` +
+        `  <body class='markdown-body'>\n${marked(content.toString())}\n</body>\n` +
+        `</html>`
         : content;
 
       res.end(finalContent, 'utf-8');
