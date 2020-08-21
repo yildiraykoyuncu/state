@@ -5,24 +5,34 @@ const expect = chai.expect;
 /**
  * renders an array of strings into an ordered list
  * @param {string[]} arr - the array of strings to render
+ * @param {number} startNum - starting index for the list
  * @returns {HTMLOListElement} the rendered list
  */
-const renderListLoop = (arr) => {
-  const olEl = document.createElement('ol');
-  olEl.start = 0;
-  for (const item of arr) {
+const renderListReduce = (arr, startNum) => {
+
+  const renderLi = (item) => {
     const liEl = document.createElement('li');
-    liEl.textContent = item;
-    olEl.appendChild(liEl);
+    liEl.innerHTML = item;
+    return liEl;
+  }
+  const appendLi = (list, nextLi) => {
+    list.appendChild(nextLi);
+    return list;
   };
+  const olEl = arr
+    .map(renderLi)
+    .reduce(appendLi, document.createElement('ol'));
+
+  olEl.start = startNum;
+
   return olEl;
 };
 
 
-describe('renderListLoop: renders a list from an array of strings', () => {
+describe('renderListReduce: renders a list from an array of strings', () => {
 
   describe('a linked button element opening to google', () => {
-    const actual = renderListLoop(['toad', 'frog', 'salamander']);
+    const actual = renderListReduce(['toad', 'frog', 'salamander'], 0);
 
     it('has tagName: "OL"', () => {
       expect(actual).to.have.property('tagName', 'OL');
@@ -77,13 +87,13 @@ describe('renderListLoop: renders a list from an array of strings', () => {
   });
 
   describe('a linked button element opening to google', () => {
-    const actual = renderListLoop(['orange', 'blue']);
+    const actual = renderListReduce(['orange', 'blue'], 3);
 
     it('has tagName: "OL"', () => {
       expect(actual).to.have.property('tagName', 'OL');
     });
-    it('has start: 0', () => {
-      expect(actual).to.have.property('start', 0);
+    it('has start: 3', () => {
+      expect(actual).to.have.property('start', 3);
     });
     it('has childElementCount: 2', () => {
       expect(actual).to.have.property('childElementCount', 2);

@@ -70,7 +70,7 @@
       ]
     },
     {
-      "path": "/03-rendering-data",
+      "path": "/02-rendering-data",
       "dirs": [
         {
           "path": "/examples",
@@ -88,10 +88,10 @@
               "path": "/4-list-loop.js"
             },
             {
-              "path": "/5-list-reduce.js"
+              "path": "/4-list-reduce.js"
             },
             {
-              "path": "/6-class-name.js"
+              "path": "/5-class-name.js"
             }
           ],
           "isExample": true

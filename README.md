@@ -118,6 +118,9 @@ Your project will contain one more directory called `/lib`, but there is nothing
   - StackOverflow: [the difference](https://stackoverflow.com/questions/6003819/what-is-the-difference-between-properties-and-attributes-in-html), [when to use which](https://stackoverflow.com/questions/3919291/when-to-use-setattribute-vs-attribute-in-javascript)
 - [Learn DOM Rendering](https://github.com/oliverjam/learn-dom-rendering)
 - [Learn Form Validation](https://github.com/oliverjam/learn-form-validation)
+- Nodes vs. Elements
+  - [Web Tunings](https://www.youtube.com/watch?v=FrX1bzWc8O4)
+  - [StackOverflow](https://stackoverflow.com/questions/9979172/difference-between-node-object-and-element-object)
 
 [TOP](#state)
 
@@ -207,7 +210,10 @@ The focus of week 2 is learning how to render data into DOM elements to create i
 
 > before class
 
-Rendering Data Examples: Isolate & Integrate
+- Rendering Data Examples: Isolate & Integrate
+- Nodes vs. Elements
+  - [Web Tunings](https://www.youtube.com/watch?v=FrX1bzWc8O4)
+  - [StackOverflow](https://stackoverflow.com/questions/9979172/difference-between-node-object-and-element-object)
 
 ### Lesson Plan
 
@@ -219,7 +225,7 @@ Rendering Data Examples: Isolate & Integrate
 
 #### [Integrate](../integrate/README.md)
 
-[3. Rendering Data](./integrate/README.md)
+[2. Rendering Data](./integrate/README.md)
 
 ### Project
 

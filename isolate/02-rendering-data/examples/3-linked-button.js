@@ -44,7 +44,7 @@ describe('linkedButton: renders a button inside of an anchor', () => {
     console.dir(actual);
 
     describe(`first child`, () => {
-      const actualChild = actual.firstChild;
+      const actualChild = actual.children[0];
       it('has tagName: "BUTTON"', () => {
         expect(actualChild).to.have.property('tagName', 'BUTTON');
       });
@@ -76,7 +76,7 @@ describe('linkedButton: renders a button inside of an anchor', () => {
     console.dir(actual);
 
     describe(`first child`, () => {
-      const actualChild = actual.firstChild;
+      const actualChild = actual.children[0];
       it('has tagName: "BUTTON"', () => {
         expect(actualChild).to.have.property('tagName', 'BUTTON');
       });

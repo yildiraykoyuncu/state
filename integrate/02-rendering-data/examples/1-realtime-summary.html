@@ -24,11 +24,11 @@
       }
 
       const summaryEl = document.createElement('summary');
-      summaryEl.textContent = summaryText;
+      summaryEl.innerHTML = summaryText;
       detailsEl.appendChild(summaryEl);
 
       const pEl = document.createElement('p');
-      pEl.textContent = mainText;
+      pEl.innerHTML = mainText;
       detailsEl.appendChild(pEl);
 
       return detailsEl;
@@ -97,7 +97,7 @@
 
   <script id='listeners'>
     document.getElementById('update-component-form')
-      .addEventListener('change', updateComponentHandler);
+      .addEventListener('input', updateComponentHandler);
 
     document.getElementById('root')
       .addEventListener('click', (e) => e.preventDefault());
