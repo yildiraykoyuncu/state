@@ -138,9 +138,10 @@
   <main id='user interface'>
     <button onclick='console.log(appLog)'>appLog</button>
     <hr>
-    <input id='phrase-input' placeholder='new phrase'>
-    <button id='add-button'>add phrase</button>
-    <br>
+    <form id="add-phrase-form" action="#">
+      <input id='phrase-input' placeholder='new phrase'>
+      <button>add phrase</button>
+    </form>
     <br>
     <div id='favorite'></div>
     <hr>
@@ -150,8 +151,8 @@
   </main>
 
   <script id='listeners'>
-    document.getElementById('add-button')
-      .addEventListener('click', addPhraseHandler);
+    document.getElementById('add-phrase-form')
+      .addEventListener('submit', addPhraseHandler);
 
     document.getElementById('phrases')
       .addEventListener('click', setFavoriteHandler);
