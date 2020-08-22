@@ -190,8 +190,8 @@ The rest is up to you!
 ```md
 - [ ] [repo](https://github.com/_/_) (with a complete README)
 - [ ] [live demo](https://_.github.io/_)
+- [ ] [backlog](https://github.com/_/_/tree/master/backlog.md)
 - [ ] [development-strategy](https://github.com/_/_/tree/master/development-strategy.md)
-- [ ] [At least 6 initial quiz questions](https://github.com/_/_/tree/master/src/data.js)
 - [ ] [A project board](https://github.com/_/_/projects/X)
 - [ ] [One branch per step in `development-strategy.md`](https://github.com/_/_/network)
 - [ ] [One closed issue per task](https://github.com/_/_/issues?q=is%3Aissue+is%3Aclosed) (you can have more than task per development step!)
