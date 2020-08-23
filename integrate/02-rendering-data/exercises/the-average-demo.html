@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset='utf-8'>
+  <title>the average</title>
+
+  <style>
+    .discreet {
+      color: darkgray;
+      font-style: italic;
+    }
+
+    .numbers-list {
+      list-style: none;
+    }
+
+    .digital {
+      font-family: monospace;
+    }
+  </style>
+
+  <script src='../../../app/lib/deep-clone.js'></script>
+
+</head>
+
+<body>
+
+  <main id='user interface'>
+    <button onclick='console.log(appLog)'>appLog</button>
+    <br>
+    what happens when you try clicking on a view in the log?
+    <hr>
+    <form id="add-number-form" action="#">
+      <input id='number-input' type='number' value='0'>
+      <button>add number to list</button>
+      <br>
+      <button type="button" id='reset-button'>reset</button>
+    </form>
+    <br>
+    <br>
+    <div id='average'></div>
+    <hr>
+    <div id='numbers-list'></div>
+  </main>
+
+  <script id='obfuscated-code'>
+    const a = ['reduce', 'appendChild', 'className', 'removeChild', 'numbers-list', 'average:\x20', 'viewAverage', 'submit', 'discreet', 'onload', 'push', 'createElement', 'average', 'add-number-form', 'length', 'value', 'input', 'add\x20number', 'innerHTML', 'click', 'numbers', 'getElementById', 'firstChild', 'digital', 'addEventListener', 'state']; (function (b, e) { const f = function (g) { while (--g) { b['push'](b['shift']()); } }; f(++e); }(a, 0x188)); const b = function (c, d) { c = c - 0x0; let e = a[c]; return e; }; 'use strict'; const state = { 'numbers': [], 'average': 0x0 }, appLog = [], average = c => { if (c[b('0xc')] === 0x0) return 0x0; const d = c[b('0xc')], e = c[b('0x18')]((g, h) => g + h), f = e / d; return f; }, renderNumberList = c => { const d = document[b('0x9')]('ul'); d[b('0x0')] = b('0x2'); for (let e = 0x0; e < c[b('0xc')]; e++) { const f = document[b('0x9')]('li'); f[b('0x0')] = b('0x15'), f[b('0x10')] = c[e], d[b('0x19')](f); } return d; }, renderAverage = c => { const d = document[b('0x9')]('p'); return d[b('0x10')] = b('0x3') + c, d[b('0x0')] = b('0x6'), d; }, addNumberHandler = () => { const c = { 'action': b('0xf') }; appLog[b('0x8')](c); const d = document[b('0x13')]('number-input'), e = Number(d[b('0xd')]); c[b('0xe')] = e, state['numbers'][b('0x8')](e), state[b('0xa')] = average(state['numbers']), c[b('0x17')] = deepClone(state); const f = document[b('0x13')](b('0xa')); while (f['firstChild']) { f[b('0x1')](f['firstChild']); } const g = renderAverage(state[b('0xa')]); f[b('0x19')](g), c['viewAverage'] = g; const h = document[b('0x13')](b('0x2')); while (h['firstChild']) { h[b('0x1')](h['firstChild']); } const i = renderNumberList(state[b('0x12')]); h[b('0x19')](i), c['viewNumbers'] = i; }, resetHandler = () => { const c = { 'action': 'reset' }; appLog[b('0x8')](c), state[b('0x12')] = [], state[b('0xa')] = 0x0, c[b('0x17')] = deepClone(state), document['getElementById']('number-input')[b('0xd')] = 0x0; const d = document[b('0x13')](b('0xa')); while (d['firstChild']) { d[b('0x1')](d[b('0x14')]); } const e = renderAverage(state[b('0xa')]); d[b('0x19')](e), c[b('0x4')] = e; const f = document[b('0x13')](b('0x2')); while (f[b('0x14')]) { f[b('0x1')](f[b('0x14')]); } }; window[b('0x7')] = () => { const c = { 'state': deepClone(state) }; appLog[b('0x8')](c); const d = document['getElementById'](b('0xa')), e = renderAverage(state[b('0xa')]); d[b('0x19')](e), c[b('0x4')] = e; }, document[b('0x13')](b('0xb'))[b('0x16')](b('0x5'), addNumberHandler), document[b('0x13')]('reset-button')[b('0x16')](b('0x11'), resetHandler);
+  </script>
+
+</body>
+
+</html>

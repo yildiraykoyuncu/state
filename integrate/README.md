@@ -1,4 +1,4 @@
-# Integrate: Separation of Concerns
+# Integrate: State
 
 Examples and exercises to study
 
@@ -6,11 +6,21 @@ Examples and exercises to study
 - /01-application-state
   - /examples
     - <a href="./01-application-state/examples/1-realtime-summary-details.html" target="_blank">/1-realtime-summary-details.html</a>
-    - <a href="./01-application-state/examples/2-favorite-word-dom.html" target="_blank">/2-favorite-word-dom.html</a>
+    - <a href="./01-application-state/examples/2-favorite-phrase-dom.html" target="_blank">/2-favorite-phrase-dom.html</a>
 
   - /exercises
     - <a href="./01-application-state/exercises/the-average-demo.html" target="_blank">/the-average-demo.html</a>
     - <a href="./01-application-state/exercises/the-average.html" target="_blank">/the-average.html</a>
+
+
+- /02-rendering-data
+  - /examples
+    - <a href="./02-rendering-data/examples/1-realtime-summary.html" target="_blank">/1-realtime-summary.html</a>
+    - <a href="./02-rendering-data/examples/2-favorite-phrase.html" target="_blank">/2-favorite-phrase.html</a>
+
+  - /exercises
+    - <a href="./02-rendering-data/exercises/the-average-demo.html" target="_blank">/the-average-demo.html</a>
+    - <a href="./02-rendering-data/exercises/the-average.html" target="_blank">/the-average.html</a>
 
 
 - /stepped-and-separated
@@ -29,9 +39,6 @@ Examples and exercises to study
     - <a href="./stepped-and-separated/list-component-stepped/5-story-pop-word.html" target="_blank">/5-story-pop-word.html</a>
     - <a href="./stepped-and-separated/list-component-stepped/6-story-shift-word.html" target="_blank">/6-story-shift-word.html</a>
     - <a href="./stepped-and-separated/list-component-stepped/7-story-reset.html" target="_blank">/7-story-reset.html</a>
-
-  - /mystery-room-separated
-    - <a href="./stepped-and-separated/mystery-room-separated/index.html" target="_blank">/index.html</a>
 
   - /searchable-dictionary-separated
     - <a href="./stepped-and-separated/searchable-dictionary-separated/index.html" target="_blank">/index.html</a>

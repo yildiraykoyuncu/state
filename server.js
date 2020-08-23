@@ -2,6 +2,7 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 const marked = require('./lib/marked.js');
+const ghStyles = require('./lib/gh-markdown-style');
 
 const PORT = process.env.PORT || 3000;
 const LOG_DIRNAME = `server-logs`;
@@ -82,7 +83,17 @@ const handleRequest = (req, res) => {
     } else {
       res.writeHead(200, { 'Content-Type': contentType });
       const finalContent = extension === '.md'
-        ? marked(content.toString())
+        ? `<!DOCTYPE html>\n` +
+        `<html>\n` +
+        `  <head>\n` +
+        `    <title>${relPath}</title>\n` +
+        `    <link rel="icon" href="./app/favicon.ico"  type="image/icon type">\n` +
+        `    <style>${ghStyles}</style>\n` +
+        `  </head>\n` +
+        `  <body class='markdown-body'>\n` +
+        `    ${marked(content.toString())}\n` +
+        `  </body>\n` +
+        `</html>`
         : content;
 
       res.end(finalContent, 'utf-8');

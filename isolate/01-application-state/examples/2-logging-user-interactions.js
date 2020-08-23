@@ -6,8 +6,13 @@
   State changes over time as users interact with it
 
   You can understand and debug your apps by storing a record of all
-  - user interactions (what did they try to do? what input did they provide?)
   - state changes (how did state change after each interaction?)
+    you learned how this worked in the previous example
+    this is the data that is interesting for users
+  - user interactions (what did they try to do? what input did they provide?)
+    this is data that is interesting for developers, and not users
+    things like: local variables, which handler was called, ...
+
 
   This is called "logging"
 

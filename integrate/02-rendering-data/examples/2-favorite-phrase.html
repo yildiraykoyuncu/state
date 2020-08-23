@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset='utf-8'>
+  <title>favorite phrase (DOM)</title>
+
+  <style>
+    .discrete {
+      color: gray;
+    }
+  </style>
+
+  <script src='../../../app/lib/deep-clone.js'></script>
+
+  <script id='data'>
+    'use strict';
+
+    const state = {
+      favorite: -1,
+      phrases: []
+    };
+
+    // log this variable in the console for a history of:
+    //  all user interactions
+    //  all state changes
+    const appLog = [{
+      state: deepClone(state)
+    }];
+  </script>
+
+  <script id='views'>
+    'use strict';
+
+    const renderPhrasesList = (arrOfStrings) => {
+      const olEl = document.createElement('ol');
+      olEl.start = 0;
+
+      for (let i = 0; i < arrOfStrings.length; i++) {
+        const liEl = document.createElement('li');
+        liEl.id = i;
+        liEl.innerHTML = arrOfStrings[i];
+        olEl.appendChild(liEl);
+      }
+
+      return olEl;
+    };
+
+    const renderFavorite = (id, phrase) => {
+      const pEl = document.createElement('p');
+
+      const favoriteTextNode = document.createTextNode('favorite: ');
+      pEl.appendChild(favoriteTextNode);
+
+      const brEl = document.createElement('br');
+      pEl.appendChild(brEl);
+
+      const phraseCodeEl = document.createElement('code');
+      phraseCodeEl.innerHTML = `${id}. ${phrase}`;
+      pEl.appendChild(phraseCodeEl);
+
+      return pEl;
+    };
+  </script>
+
+  <script id='handlers'>
+    'use strict';
+
+    const addPhraseHandler = (event) => {
+      const logEntry = {
+        action: 'add phrase',
+        event
+      };
+      appLog.push(logEntry);
+
+      const inputEl = document.getElementById('phrase-input');
+      const userInput = inputEl.value;
+      // log user input
+      logEntry.input = userInput;
+
+      if (userInput === '') {
+        // log early exit
+        logEntry.exit = 'empty user input';
+        return;
+      }
+
+      // update state
+      state.phrases.push(userInput);
+      // log new state
+      logEntry.state = deepClone(state);
+
+      // update UI from state
+      const phrasesContainer = document.getElementById('phrases');
+      while (phrasesContainer.firstChild) {
+        phrasesContainer.removeChild(phrasesContainer.firstChild);
+      }
+      const renderedList = renderPhrasesList(state.phrases);
+      phrasesContainer.appendChild(renderedList);
+      // log new view rendered from state
+      logEntry.view = renderedList;
+    };
+
+    const setFavoriteHandler = (event) => {
+      const logEntry = {
+        action: 'set favorite',
+        event
+      };
+      appLog.push(logEntry);
+
+      if (event.target === event.currentTarget) {
+        // log early exit
+        logEntry.exit = 'did not click a list item';
+        return;
+      }
+
+      const favoriteLi = event.target;
+      const favoriteIndexStr = favoriteLi.id;
+      const favoriteIndex = Number(favoriteIndexStr);
+      state.favorite = favoriteIndex;
+      // log new state
+      logEntry.state = deepClone(state);
+
+      // update UI from state
+      const favoriteContainer = document.getElementById('favorite');
+      while (favoriteContainer.firstChild) {
+        favoriteContainer.removeChild(favoriteContainer.firstChild);
+      }
+      const newFavoriteView = renderFavorite(state.favorite, state.phrases[state.favorite]);
+      favoriteContainer.appendChild(newFavoriteView);
+      // log new view rendered from state
+      logEntry.view = newFavoriteView;
+    };
+  </script>
+</head>
+
+<body>
+
+  <main id='user interface'>
+    <button onclick='console.log(appLog)'>appLog</button>
+    <hr>
+    <form id="add-phrase-form" action="#">
+      <input id='phrase-input' placeholder='new phrase'>
+      <button>add phrase</button>
+    </form>
+    <br>
+    <div id='favorite'></div>
+    <hr>
+    <text class='discrete'>click an item to set favorite</text>
+    <br>
+    <div id='phrases'></div>
+  </main>
+
+  <script id='listeners'>
+    document.getElementById('add-phrase-form')
+      .addEventListener('submit', addPhraseHandler);
+
+    document.getElementById('phrases')
+      .addEventListener('click', setFavoriteHandler);
+  </script>
+
+</body>
+
+</html>

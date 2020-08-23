@@ -1,1 +1,4 @@
-examples from previous courses. the coding style does not line up exactly with what you have seen in class, but there is still a lot to learn from them
+Examples to study, nothing no write or fix.
+
+__Stepped__: projects broken into development steps
+__Separated__: projects separated into different files and folders

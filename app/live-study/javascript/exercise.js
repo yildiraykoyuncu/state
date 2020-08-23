@@ -86,7 +86,9 @@ export default (() => {
   }
 
   Exercise.prototype.studyWith = function (vizTool, whichCode, loopGuard = this.config.loopGuard) {
-    console.log(`--- ${vizTool}: ${this.path.rel} ----`);
+    const title = `====  ${this.path.rel}: ${vizTool}  ====`;
+    const padding = Array.from(title).map(() => '-').join('');
+    console.log(`%c\n\n${padding}\n${title}\n${padding}\n`, 'font-weight:bold;');
     let code = whichCode === 'monacoModel'
       ? this.monacoModel.getValue()
       : this.code;

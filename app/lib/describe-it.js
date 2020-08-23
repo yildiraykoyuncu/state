@@ -1,4 +1,4 @@
-const describe = (description, testFunction) => {
+const describe = (description, testFunction, collapsed = false) => {
   if (typeof description !== 'string') {
     throw new TypeError('first argument must be a string');
   }
@@ -6,7 +6,12 @@ const describe = (description, testFunction) => {
     throw new TypeError('second argument must be a function');
   }
 
-  console.group(`%c${description}`, 'font-weight: bold;');
+  if (collapsed) {
+    console.groupCollapsed(`%c${description}`, 'font-weight: bold;');
+  }
+  else {
+    console.group(`%c${description}`, 'font-weight: bold;');
+  }
   try {
     testFunction();
   } catch (err) {

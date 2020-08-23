@@ -68,10 +68,59 @@
           ]
         }
       ]
+    },
+    {
+      "path": "/02-rendering-data",
+      "dirs": [
+        {
+          "path": "/examples",
+          "files": [
+            {
+              "path": "/1-anchor.js"
+            },
+            {
+              "path": "/2-header.js"
+            },
+            {
+              "path": "/3-linked-header.js"
+            },
+            {
+              "path": "/4-a-list-loop.js"
+            },
+            {
+              "path": "/4-b-list-reduce.js"
+            },
+            {
+              "path": "/5-class-name-class-list.js"
+            }
+          ],
+          "isExample": true
+        },
+        {
+          "path": "/exercises",
+          "files": [
+            {
+              "path": "/1-paragraph.js"
+            },
+            {
+              "path": "/2-info.js"
+            },
+            {
+              "path": "/3-signup-form.js"
+            },
+            {
+              "path": "/4-all-users.js"
+            },
+            {
+              "path": "/5-game-board.js"
+            }
+          ]
+        }
+      ]
     }
   ],
   "config": {
-    "title": "s-o-c/isolate",
+    "title": "state/isolate",
     "path": "/",
     "loopGuard": {
       "active": false,

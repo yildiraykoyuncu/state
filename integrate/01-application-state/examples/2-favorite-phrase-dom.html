@@ -11,7 +11,7 @@
     }
   </style>
 
-  <script src='../../../lib/deep-clone.js'></script>
+  <script src='../../../app/lib/deep-clone.js'></script>
 
   <script id='data'>
     'use strict';
@@ -32,31 +32,34 @@
   <script id='views'>
     'use strict';
 
-    const renderWordsLis = (arrOfStrings) => {
+    const renderPhrasesList = (arrOfStrings) => {
       const addListEntry = (list, next, index) => {
-        return `${list}\n<li index="${index}">${next}</li>`;
+        return `${list}\n<li id="${index}">${next}</li>`;
       };
-      return arrOfStrings
+
+      const listItems = arrOfStrings
         .reduce(addListEntry, '');
+
+      return `<ol start="0">${listItems}\n</ol>`
     };
 
-    console.log('--- testing: renderWordsLis');
-    console.assert(renderWordsLis(['a', 'b']) === '\n<li index="0">a</li>\n<li index="1">b</li>',
+    console.log('--- testing: renderPhrasesList');
+    console.assert(renderPhrasesList(['a', 'b']) === '<ol start="0">\n<li id="0">a</li>\n<li id="1">b</li>\n</ol>',
       'Test 1');
-    console.assert(renderWordsLis(['a', 'b', 'c']) === '\n<li index="0">a</li>\n<li index="1">b</li>\n<li index="2">c</li>',
+    console.assert(renderPhrasesList(['a', 'b', 'c']) === '<ol start="0">\n<li id="0">a</li>\n<li id="1">b</li>\n<li id="2">c</li>\n</ol>',
       'Test 2');
-    console.assert(renderWordsLis(['potato', 'tomato']) === '\n<li index="0">potato</li>\n<li index="1">tomato</li>',
+    console.assert(renderPhrasesList(['potato', 'tomato']) === '<ol start="0">\n<li id="0">potato</li>\n<li id="1">tomato</li>\n</ol>',
       'Test 3');
 
-    const renderFavorite = (index, phrase) => {
-      return `<p>favorite:</p> <code>${index}. ${phrase}</code>`;
+    const renderFavorite = (id, phrase) => {
+      return `<p>favorite:</p> <code>${id}. ${phrase}</code>`;
     };
   </script>
 
   <script id='handlers'>
     'use strict';
 
-    const addWordHandler = () => {
+    const addPhraseHandler = (event) => {
       const logEntry = {
         action: 'add phrase',
         event
@@ -78,9 +81,9 @@
       // log new state
       logEntry.state = deepClone(state);
 
-      const renderedLis = renderWordsLis(state.phrases);
-      const listEl = document.getElementById('phrases-list');
-      listEl.innerHTML = renderedLis;
+      const renderedLis = renderPhrasesList(state.phrases);
+      const phrasesEl = document.getElementById('phrases');
+      phrasesEl.innerHTML = renderedLis;
       // log new view
       logEntry.view = renderedLis;
     };
@@ -99,7 +102,7 @@
       }
 
       const favoriteLi = event.target;
-      const favoriteIndexStr = favoriteLi.getAttribute('index');
+      const favoriteIndexStr = favoriteLi.id;
       const favoriteIndex = Number(favoriteIndexStr);
       state.favorite = favoriteIndex;
       // log new state
@@ -127,14 +130,14 @@
     <hr>
     <text class='discrete'>click an item to set favorite</text>
     <br>
-    <ol id='phrases-list' start='0'></ol>
+    <div id='phrases'></div>
   </main>
 
   <script id='listeners'>
     document.getElementById('add-button')
-      .addEventListener('click', addWordHandler);
+      .addEventListener('click', addPhraseHandler);
 
-    document.getElementById('phrases-list')
+    document.getElementById('phrases')
       .addEventListener('click', setFavoriteHandler);
   </script>
 

@@ -4,13 +4,12 @@ const expect = chai.expect;
 
 /* Provide correct input
 
-  this exercises doesn't have any code to write, fix, or complete!
+  you do not need to write any code, fix any bugs or fill any blanks!
 
-  instead, all you need to do is provide input
-  the challenge is to provide the right input
+  throughout the script there are two tests
+    the tests assert what state should be at that step of the program
 
-  throughout the script there will be several state checks
-  these are it() tests to test the current state
+  your challenge is to provide the correct user input to pass these tests
 
 */
 
@@ -44,10 +43,10 @@ while (acceptingInput) {
 
 
 // --- provide the correct input to pass this test ---
-it('the user entered "a", "b", "c"', () => {
+it('the user entered "toad", "bear", "koala"', () => {
   const expected = {
     favorite: -1,
-    words: ['a', 'b', 'c']
+    words: ['toad', 'bear', 'koala']
   };
   expect(state).to.deep.equal(expected);
 });
@@ -88,10 +87,10 @@ else {
 }
 
 // --- provide the correct user input to pass this test ---
-it('the user prefers "b"', () => {
+it('the user prefers "bear"', () => {
   const expected = {
     favorite: 1,
-    words: ['a', 'b', 'c']
+    words: ['toad', 'bear', 'koala']
   };
   expect(state).to.deep.equal(expected);
 });

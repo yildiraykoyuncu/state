@@ -6,7 +6,7 @@
   <title>Up, Down</title>
   <link rel="stylesheet" href="./style.css">
 
-  <script src='../../../lib/deep-clone.js'></script>
+  <script src='../../../app/lib/deep-clone.js'></script>
 
   <script src='./data/measurements.js'></script>
   <script src='./log.js'></script>
@@ -22,7 +22,7 @@
 <body>
   <section id='user-interface' class='centered'>
     <form id='input-form'>
-      <input type='text' name='measurement' />
+      <input type='number' name='measurement' />
       <input id='measurement-button' type='button' value='' />
     </form>
     <br>
@@ -35,6 +35,10 @@
   <script src='./listeners/add.js'></script>
   <script src='./listeners/reset.js'></script>
   <script src='./listeners/close-open.js'></script>
+
+
+  <script src='../lib/gremlins.js'></script>
+  <script src='../lib/gremlins-button.js'></script>
 </body>
 
 </html>
