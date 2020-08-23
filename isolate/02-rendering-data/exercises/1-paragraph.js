@@ -22,6 +22,9 @@ describe('renderParagraph: renders a paragraph with optional styling', () => {
     it('has text: "lorem ipsum"', () => {
       expect(actual).to.have.text('lorem ipsum');
     });
+    it('has classList length 0', () => {
+      expect(actual.classList).to.have.length(0);
+    });
     it('has className: ""', () => {
       expect(actual).to.have.property('className', '');
     });
@@ -40,8 +43,17 @@ describe('renderParagraph: renders a paragraph with optional styling', () => {
     it('has text: "lorem ipsum"', () => {
       expect(actual).to.have.text('lorem ipsum');
     });
-    it('has className: "fancy hoverable emphatic "', () => {
-      expect(actual).to.have.property('className', 'fancy hoverable emphatic ');
+    it('has classList length 3', () => {
+      expect(actual.classList).to.have.length(3);
+    });
+    it('has class: "fancy"', () => {
+      expect(actual).to.have.class('fancy');
+    });
+    it('has class: "hoverable"', () => {
+      expect(actual).to.have.class('hoverable');
+    });
+    it('has class: "emphatic"', () => {
+      expect(actual).to.have.class('emphatic');
     });
     it('has childElementCount: 0', () => {
       expect(actual).to.have.property('childElementCount', 0);
@@ -58,8 +70,11 @@ describe('renderParagraph: renders a paragraph with optional styling', () => {
     it('has text: "hello user"', () => {
       expect(actual).to.have.text('hello user');
     });
-    it('has className: "friendly "', () => {
-      expect(actual).to.have.property('className', 'friendly ');
+    it('has classList length 1', () => {
+      expect(actual.classList).to.have.length(1);
+    });
+    it('has className: "friendly"', () => {
+      expect(actual).to.have.property('className', 'friendly');
     });
     it('has childElementCount: 0', () => {
       expect(actual).to.have.property('childElementCount', 0);

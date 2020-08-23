@@ -45,8 +45,11 @@ describe('renderAllUsers: renders a list of user screen names and real names', (
     it('has id: "bots"', () => {
       expect(actual).to.have.property('id', 'bots');
     });
-    it('has className: "red-alert "', () => {
-      expect(actual).to.have.property('className', 'red-alert ');
+    it('has classList length 1', () => {
+      expect(actual.classList).to.have.length(1);
+    });
+    it('has className: "red-alert"', () => {
+      expect(actual).to.have.property('className', 'red-alert');
     });
     it('has childElementCount: 2', () => {
       expect(actual).to.have.property('childElementCount', 2);
@@ -104,8 +107,14 @@ describe('renderAllUsers: renders a list of user screen names and real names', (
     it('has id: "super-users"', () => {
       expect(actual).to.have.property('id', 'super-users');
     });
-    it('has className: "alumni hoverable "', () => {
-      expect(actual).to.have.property('className', 'alumni hoverable ');
+    it('has classList length 2', () => {
+      expect(actual.classList).to.have.length(2);
+    });
+    it('has class: "alumni"', () => {
+      expect(actual).to.have.class('alumni');
+    });
+    it('has class: "hoverable"', () => {
+      expect(actual).to.have.class('hoverable');
     });
     it('has childElementCount: 3', () => {
       expect(actual).to.have.property('childElementCount', 3);

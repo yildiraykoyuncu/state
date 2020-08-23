@@ -1,8 +1,8 @@
 'use strict';
 
-/* el.className
+/* el.className && el.classList
 
-  An important property for UI development is .className
+  Two important property for UI development is .className & .classList
   This allows you to coordinate your views with your website's style sheet
 
 */
@@ -40,6 +40,9 @@ describe('renderHeader: renders DOM headers of different levels and classes', ()
     it('has text: "hello"', () => {
       expect(actual).to.have.text('hello');
     });
+    it('has classList length 0', () => {
+      expect(actual.classList).to.have.length(0);
+    });
     it('has className: ""', () => {
       expect(actual).to.have.property('className', '');
     });
@@ -56,8 +59,14 @@ describe('renderHeader: renders DOM headers of different levels and classes', ()
     it('has text: "good bye"', () => {
       expect(actual).to.have.text('good bye');
     });
-    it('has className: "fancy hover-left"', () => {
-      expect(actual).to.have.property('className', 'fancy hover-left');
+    it('has classList length 2', () => {
+      expect(actual.classList).to.have.length(2);
+    });
+    it('have class: "fancy"', () => {
+      expect(actual).to.have.class('fancy');
+    });
+    it('have class: "hover-left"', () => {
+      expect(actual).to.have.class('hover-left');
     });
     it('has childElementCount: 0', () => {
       expect(actual).to.have.property('childElementCount', 0);
