@@ -85,13 +85,13 @@
               "path": "/3-linked-header.js"
             },
             {
-              "path": "/4-list-loop.js"
+              "path": "/4-a-list-loop.js"
             },
             {
-              "path": "/4-list-reduce.js"
+              "path": "/4-b-list-reduce.js"
             },
             {
-              "path": "/5-class-name-and-list.js"
+              "path": "/5-class-name-class-list.js"
             }
           ],
           "isExample": true
