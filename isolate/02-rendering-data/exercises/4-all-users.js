@@ -11,7 +11,7 @@ const renderAllUsers = (arrOfUsers, id, classList = []) => {
   const ulEl = document.createElement('ul');
   ulEl._ = _;
   for (const _ of _) {
-    ulEl.className += `${_} `;
+    ulEl.classList.add(_);
   }
 
   for (const _ of _) {

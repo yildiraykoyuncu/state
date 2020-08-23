@@ -26,7 +26,7 @@ const renderHeader = (level, text, classList = []) => {
   const headerEl = document.createElement(`h${level}`);
   headerEl.innerHTML = text;
   for (const className of classList) {
-    headerEl.className += `${className} `;
+    headerEl.classList.add(className);
   }
   return headerEl;
 };
@@ -56,8 +56,8 @@ describe('renderHeader: renders DOM headers of different levels and classes', ()
     it('has text: "good bye"', () => {
       expect(actual).to.have.text('good bye');
     });
-    it('has className: "fancy hover-left "', () => {
-      expect(actual).to.have.property('className', 'fancy hover-left ');
+    it('has className: "fancy hover-left"', () => {
+      expect(actual).to.have.property('className', 'fancy hover-left');
     });
     it('has childElementCount: 0', () => {
       expect(actual).to.have.property('childElementCount', 0);
